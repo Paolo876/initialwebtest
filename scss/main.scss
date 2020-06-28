@@ -1,0 +1,152 @@
+@import 'logo';
+
+*,
+*:before,
+*:after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+$primary-color: rgb(209, 171, 0);
+$dark-color: #333;
+$light-color: #f4f4f4;
+
+
+
+
+body {
+   background: #333;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to top, #272727, #333);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to top, #333, #272727); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   font-family: 'Oswald', sans-serif;
+   height: 100vh;
+}
+
+a {
+   text-decoration: none;
+   color: $primary-color;
+   cursor: pointer;
+   transition: .3s all ease-in-out;
+
+   &:hover {
+      color: $light-color;
+   }
+}
+
+li {
+   list-style: none;
+}
+
+.container {
+   max-width: 1100px;
+   margin: auto;
+   display: block;
+   // overflow: hidden;
+
+}
+
+.line-break {
+   display: block;
+   height: 1px;
+   width: 5%;
+   background: $light-color;
+   opacity: .2;
+   margin: 1rem auto;
+}
+
+
+// NAVBAR
+#navbar .container{
+   height: 50px;
+   // border-bottom: 1px solid #444444;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   .nav-logo a{
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: 1.4rem;
+      margin: 1rem;
+      position: relative;
+
+      &:hover {
+
+
+      }
+   }
+
+   ul {
+      display: flex;
+      margin: 1rem;
+
+      li{
+        margin-left: 3rem;
+
+
+      }
+
+   }
+}
+
+#logo-section {
+   display: flex;
+
+   margin: 4rem 0;
+   text-align: center;
+   align-content: center;
+   justify-content: center;
+   flex-direction: row;
+}
+
+#intro {
+   h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: $primary-color;
+   }
+}
+
+
+#main-footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   padding: 1.2rem;
+
+   .footer-content {
+      display: grid;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      grid-gap: 2rem;
+
+      .social {
+         i {
+            margin: 2rem;
+            color: $light-color;
+            opacity: .8;
+            transition: .4s all ease;
+
+            &:hover {
+               transform: scale(1.4);
+               color: $primary-color;
+               opacity: 1;
+            }
+         }
+      }
+
+      p {
+         color: $light-color;
+         opacity: .8;
+         font-size: 1.2rem;
+
+         &:last-child {
+            font-size: .7rem;
+         }
+      }
+
+   }
+}

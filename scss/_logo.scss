@@ -1,0 +1,239 @@
+$logo-bg: #272727;
+
+
+#logo {
+   height: 400px;
+   width: 400px;
+   display: block;
+   background: $logo-bg;
+   // padding: 5%;
+   border-radius: 50%;
+   position: relative;
+   transform: scale(.7);
+   // border: 10px solid #f4f4f456;
+   box-sizing: unset;
+   animation: animateRotate 50s infinite forwards alternate-reverse linear;
+
+
+
+
+
+
+
+   .logo-container {
+      // position: relative;
+      height: 95%;
+      width: 95%;
+      text-align: center;
+      margin: auto;
+      align-items: center;
+      background: transparent;
+
+      &:hover .div:last-child {
+         height: 150%;
+      }
+
+
+
+      .p-box {
+         position: relative;
+         top: 15px;
+         left: -20px;
+         transform: scale(1.1);
+
+         div {
+
+            &:first-child {
+               position: absolute;
+               top: 150px;
+               left: 50px;
+               height: 150px;
+               width: 16px;
+               background: #f4f4f4;
+               transform: rotate(20deg) skewY(60deg);
+               border-radius: 30px 0 0 0;
+               animation: animateColor 20s infinite forwards alternate-reverse linear;
+
+               &:before {
+                  content: '';
+                  position: absolute;
+                  top: 155px;
+                  left: -1px;
+                  height: 2%;
+                  width: 125%;
+                  background: #f4f4f4;
+                  animation: animateColor 20s infinite forwards alternate-reverse linear;
+
+               }
+            }
+
+            &:nth-child(2) {
+               position: absolute;
+               top: 74px;
+               left: 137px;
+               height: 150px;
+               width: 12px;
+               background: #f4f4f4;
+               transform: rotate(75deg) skewY(34deg);
+               animation: animateColor 20s infinite forwards alternate-reverse linear;
+
+
+               &:before {
+                  content: '';
+                  position: absolute;
+                  top: 10px;
+                  left: -12px;
+                  height: 100%;
+                  width: 100%;
+                  background: $logo-bg;
+               }
+            }
+
+            &:last-child {
+               position: absolute;
+               top: 122px;
+               left: 196px;
+               height: 100px;
+               width: 4px;
+               background: #f4f4f4;
+               transform: rotate(20deg) skewY(-60deg);
+               animation: animateColor 20s infinite forwards alternate-reverse linear;
+
+
+
+               &:before {
+                  content: '';
+                  position: absolute;
+                  top: -1px;
+                  left: 4px;
+                  height: 100%;
+                  width: 90%;
+                  background: $logo-bg;
+                  border-right: .5px solid #f4f4f4;
+                  // animation: animateColor 20s infinite forwards alternate-reverse linear;
+
+
+               }
+
+
+            }
+
+
+         }
+      }
+
+      // B
+      .b-box {
+         position: relative;
+         top: 20px;
+         left: -30px;
+         z-index: 2;
+         transform: scale(1.1);
+
+
+         div {
+
+            &:first-child {
+               position: absolute;
+               top: -5px;
+               left: 258px;
+               height: 250px;
+               width: 4px;
+               background: #f4f4f4;
+               transform: rotate(20deg) skewY(-60deg);
+               animation: animateColor 20s infinite forwards alternate-reverse linear;
+
+               &:before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 15px;
+                  height: 117%;
+                  width: 10%;
+                  background: #f4f4f4;
+                  // animation: animateColor 20s infinite forwards alternate-reverse linear;
+
+               }
+            }
+
+            &:nth-child(2) {
+               position: absolute;
+               top: 144px;
+               left: 280px;
+               height: 140px;
+               width: 12px;
+               background: #f4f4f4;
+               transform: rotate(75deg) skewY(34deg);
+               animation: animateColor 20s infinite forwards alternate-reverse linear;
+
+
+               &:before {
+                  content: '';
+                  position: absolute;
+                  top: -10px;
+                  left: 12px;
+                  height: 110%;
+                  width: 110%;
+                  background: $logo-bg;
+                  z-index: 2;
+               }
+            }
+
+            &:last-child {
+               position: absolute;
+               top: 128px;
+               left: 349px;
+               height: 80px;
+               width: 17px;
+               background: #f4f4f4;
+               transform: rotate(20deg) skewY(45deg);
+               animation: animateColor 20s infinite forwards alternate-reverse linear;
+               border-radius: 0 0 50px 0;
+               z-index: -1;
+
+
+            }
+
+
+         }
+      }
+
+   }
+}
+
+
+@keyframes animateColor {
+   0% {
+      background: rgb(168, 8, 8);
+   }
+   25% {
+      background: #dd7a0a;
+   }
+
+   50% {
+      background:rgb(216, 177, 2)0;
+   }
+
+   75% {
+      background: #62ac0e;
+
+   }
+
+   100% {
+      background: #097799;
+
+   }
+}
+
+@keyframes animateRotate {
+   0% {
+      transform: rotate(0deg) scale(.7);
+   }
+
+   50% {
+      transform: rotate(-20deg) scale(.7);
+
+   }
+
+
+}
