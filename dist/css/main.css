@@ -4,10 +4,9 @@
   display: block;
   background: #272727;
   border-radius: 50%;
-  position: relative;
+  position: absolute;
   transform: scale(0.7);
-  box-sizing: unset;
-  animation: animateRotate 50s infinite forwards alternate-reverse linear; }
+  box-sizing: unset; }
   #logo .logo-container {
     height: 95%;
     width: 95%;
@@ -141,12 +140,6 @@
   100% {
     background: #097799; } }
 
-@keyframes animateRotate {
-  0% {
-    transform: rotate(0deg) scale(0.7); }
-  50% {
-    transform: rotate(-20deg) scale(0.7); } }
-
 *,
 *:before,
 *:after {
@@ -211,13 +204,17 @@ li {
   text-align: center;
   align-content: center;
   justify-content: center;
-  flex-direction: row; }
+  flex-direction: row;
+  position: relative;
+  height: 25rem; }
 
-#intro h1 {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #d1ab00; }
+#intro {
+  display: block; }
+  #intro h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #d1ab00; }
 
 #main-footer {
   position: absolute;
@@ -245,3 +242,48 @@ li {
       font-size: 1.2rem; }
       #main-footer .footer-content p:last-child {
         font-size: .7rem; }
+
+@media (max-width: 600px) {
+  #navbar {
+    height: 80px;
+    overflow: hidden; }
+    #navbar .navbar-container {
+      display: flex;
+      flex-direction: column; }
+      #navbar .navbar-container .nav-logo {
+        margin-top: .4rem;
+        border-bottom: 1px solid #f4f4f41e;
+        padding-bottom: .2rem; }
+        #navbar .navbar-container .nav-logo a {
+          font-size: 1.5rem !important;
+          font-weight: 600;
+          letter-spacing: .4rem; }
+      #navbar .navbar-container .nav-links {
+        margin: .9rem 0 0 0;
+        font-size: .7rem;
+        padding: .2rem; }
+        #navbar .navbar-container .nav-links li {
+          margin: 0 1.7rem;
+          opacity: .9;
+          padding-bottom: .1rem;
+          border-bottom: 1px solid transparent;
+          transition: .5s border ease;
+          transition-delay: .3s; }
+          #navbar .navbar-container .nav-links li:hover {
+            border-bottom: 1px solid #f4f4f4; }
+  #logo-section {
+    margin: 0;
+    transform: scale(0.7); }
+  .line-break {
+    display: none; }
+  #intro {
+    text-align: center; }
+    #intro h1 {
+      font-weight: 300;
+      font-size: 1.2rem; }
+  #main-footer .footer-container {
+    margin: 0; }
+    #main-footer .footer-container .social {
+      font-size: .9rem;
+      background: blue;
+      padding: 0; } }

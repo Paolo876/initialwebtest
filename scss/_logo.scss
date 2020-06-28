@@ -8,12 +8,11 @@ $logo-bg: #272727;
    background: $logo-bg;
    // padding: 5%;
    border-radius: 50%;
-   position: relative;
+   position: absolute;
    transform: scale(.7);
    // border: 10px solid #f4f4f456;
    box-sizing: unset;
-   animation: animateRotate 50s infinite forwards alternate-reverse linear;
-
+   // visibility: hidden;
 
 
 
@@ -223,17 +222,4 @@ $logo-bg: #272727;
       background: #097799;
 
    }
-}
-
-@keyframes animateRotate {
-   0% {
-      transform: rotate(0deg) scale(.7);
-   }
-
-   50% {
-      transform: rotate(-20deg) scale(.7);
-
-   }
-
-
 }
